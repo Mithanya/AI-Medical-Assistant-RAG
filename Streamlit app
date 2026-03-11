@@ -1,0 +1,24 @@
+import streamlit as st
+from rag_engine import MedicalRAGEngine
+
+# Initialize RAG engine
+engine = MedicalRAGEngine()
+st.success("✅ Medical RAG Engine is ready!")
+
+st.title("Medical RAG Q&A")
+
+# Input box
+query = st.text_input("Enter your medical question:")
+
+if st.button("Get Answer") and query:
+    result = engine.generate_answer(query)
+    
+    st.subheader("Answer")
+    st.write(result["answer"])
+    
+    st.subheader("Sources")
+    st.write(result["sources"])
+    
+    st.subheader("Context Chunks")
+    for i, chunk in enumerate(result["context_chunks"], 1):
+        st.write(f"Chunk {i}: {chunk[:500]}...") 
