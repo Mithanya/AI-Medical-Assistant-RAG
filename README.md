@@ -5,7 +5,7 @@ The application retrieves relevant information from medical documents and genera
 
 This project demonstrates how modern AI systems can combine **information retrieval and language models** to provide reliable, context-based answers.
 
-⚠️ **Disclaimer:** This project is created for educational and research purposes only and should not be considered as professional medical advice.
+ **Disclaimer:** This project is created for educational and research purposes only and should not be considered as professional medical advice.
 
 ---
 
